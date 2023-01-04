@@ -25,11 +25,9 @@ SOLUTION:
 c=input().strip()
 a='abcdefghijklmnopqrstuvwxyz'
 v='aeiou'
+print(c, end="")
 k=a.index(c)
-l=a[k:]
-for i in l: 
-    if i in v:
-        print(i, end="")
-        break
-    else:
-        print(i, end="")
+l=a[k+1:]
+for i in l:
+    print(i, end="")
+    if i in v: break
