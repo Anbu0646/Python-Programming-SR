@@ -24,3 +24,11 @@ Output: 45 45
 
 SOLUTION:
 '''
+
+n, x = map(int,input().strip().split())
+l=list(map(int, input().strip().split()))
+k, p=[abs(x-i) for i in l], []
+for i in l:
+    if abs(x-i)==min(k):
+        p.append(i)
+print(*p)
