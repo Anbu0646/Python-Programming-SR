@@ -29,3 +29,15 @@ Output: 2 -1 -1 -1
 
 SOLUTION:
 '''
+
+n = int(input())
+l = list(map(str,input().split()))
+for i in l:
+    s=""
+    for val in i:
+        if val in "2357":
+            s+=val
+    if len(s)==0:
+        print("-1",end=" ")
+    else:
+        print(''.join(sorted(s)),end=" ")
