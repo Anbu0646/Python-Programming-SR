@@ -34,3 +34,16 @@ Output: No
 SOLUTION:
 '''
 
+m, n = map(int, input().split())
+hr, mi = map(int, input().split(":"))
+l=list(map(str, input().split()))
+c=0
+
+for i in range(m):
+    hr1, mi1 = l[i].split(":")
+    hr1, mi1 = int(hr1), int(mi1)
+    
+    if(hr>hr1):  c+=1
+    elif(hr==hr1 and mi>=mi1):  c+=1
+
+print("No" if (c>=n) else "Yes")
